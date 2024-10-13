@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body >
+    
+   <div class="container">
+    <div ng-app="myApp" style="width: 550px; margin: 100px; border: 2px solid #fff3; padding: 20px;box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;" >
+        <p style="margin-left: 200px;">Edit Task</p> 
+        <br>
+        <p>AssignTo: <input type="text" ng-model="AssignTo" placeholder="User 1"></p>
+        <p ng-bind="AssignTo"></p>
+        <p>Status: <input type="text" ng-model="status" placeholder="Not status"></p>
+        <p ng-bind="status"></p>
+        <p>Due Date: <input type="datetime-local" ng-model="date" placeholder="12/May/2016"></p>
+        <p ng-bind="date"></p>
+        <p>Prioority: <input type="text" ng-model="Prioority" placeholder="normal"></p>
+        <p ng-bind="Prioority"></p>
+        <p>Discription: <input type="text" ng-model="discripyion" style="padding: 30px; width: 400px;"></p>
+         <p ng-bind="Discription"></p>
+           
+               <div style="margin-left: 350px;"> 
+                <button class="btn btn-warning"><a href="Screen1.html">Cancel</a></button>
+                <button class="btn btn-success"><a href="Screen1.html">Save</a></button>
+
+               </div>
+           </div>
+      </div>
+   </div>
+     
+        
+      
+        
+       
+</body>
+</html>

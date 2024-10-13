@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+
+<body>
+   
+<div class="container">
+    <div ng-app="myApp" ng-controller="customersCtrl">
+
+      <div ng-app="myApp" ng-controller="customersCtrl"> 
+          <div style="float: right;">
+            <button class="btn btn-warning"><a href="NewTAsk.html">New Task</a></button>
+            <button class="btn btn-warning"><a href="">Referesh</a></button>
+ 
+          </div>
+          <br><br>
+        <div style="float: inline-end;"><input type="search" placeholder="search" style="border-radius: 20px;"></div>
+        <table class="table">
+          <thead>
+          <th>Assign To</th>
+          <th>Status</th>
+          <th>Due Date</th>
+          <th>Priority</th>
+          <th>Comments</th>
+          </thead>
+          <tbody>
+            <tr ng-repeat="x in names">
+              <td><a href="">User1</a></td>
+              <td>complete</td>
+              
+                <td><button class="btn btn-warning"><a href="Screen1.html">Edit</a></button></td>
+                <td><button class="btn btn-success"><a href="Screen1.html">Delete</a></button>
+                </td>
+               </div>
+            </tr>
+            <tr ng-repeat="x in names">
+              <td><a href="">User 2</a></td>
+              <td>12/10/2024</td>
+            </tr>
+              <tr ng-repeat="x in names">
+                <td><a href="">User3</a></td>
+                <td>12/10/2024</td>
+              </tr>
+              <tr ng-repeat="x in names">
+              <td>User 4</td>
+              <td>12/10/2024</td>
+            </tr>
+          </tbody>
+          
+        </table>
+        
+        </div>
+        
+        <script>
+        var app = angular.module('myApp', []);
+        app.controller('customersCtrl', function($scope, $http) {
+            $http.get("customers.php")
+            .then(function (response) {$scope.names = response.data.records;});
+            
+        });
+
+        
+        </script>
+ </div>
+    
+     
+   
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body >
+    
+   <div class="container">
+    <div ng-app="myApp" style="width: 550px; margin: 100px; border: 2px solid #333; padding: 20px;" >
+        <p style="margin-left: 200px;">New Task</p> 
+        <br>
+        <p>AssignTo: <input type="text" ng-model="AssignTo" placeholder="User 1"></p>
+        <p ng-bind="AssignTo"></p>
+        <p>Status: <input type="text" ng-model="status" placeholder="Not status"></p>
+        <p ng-bind="status"></p>
+        <p>Due Date: <input type="datetime" ng-model="date" placeholder="12/May/2016"></p>
+        <p ng-bind="date"></p>
+        <p>Prioority: <input type="text" ng-model="Prioority" placeholder="normal"></p>
+        <p ng-bind="Prioority"></p>
+        <p>Discription: <input type="text" ng-model="discripyion" style="padding: 40px; width: 200px;"></p>
+         <p ng-bind="Discription"></p>
+      </div>
+   </div>
+     
+        
+      
+        
+       
+</body>
+</html>
